@@ -1,0 +1,820 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clove Dental</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .md\:flex-row {
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            .md\:flex-row { flex-direction: row; }
+            .md\:w-1\/2 { width: 50%; }
+            .md\:justify-end { justify-content: flex-end; }
+            .md\:text-left { text-align: left; }
+            .md\:mb-0 { margin-bottom: 0; }
+            .md\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+            .md\:p-8 { padding: 2rem; }
+            .md\:w-3\/4 { width: 75%; }
+            .md\:max-w-none { max-width: none; }
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\:w-auto { width: auto; }
+        }
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+            .lg\:flex { display: flex; }
+        }
+        @media (min-width: 1280px) {
+            .xl\:w-1\/2 { width: 50%; }
+        }
+
+        .justify-between { justify-content: space-between; }
+        .items-center { align-items: center; }
+        .text-center { text-align: center; }
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .top-1\/2 { top: 50%; }
+        .left-1\/2 { left: 50%; }
+        .transform { transform: translate(-50%, -50%); }
+        .translate-x-1\/2 { transform: translateX(-50%); }
+        .translate-y-1\/2 { transform: translateY(-50%); }
+        .w-full { width: 100%; }
+        .w-11\/12 { width: 91.666667%; }
+        .max-w-sm { max-width: 24rem; }
+        .max-w-md { max-width: 28rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .rounded-full { border-radius: 9999px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded { border-radius: 0.25rem; }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+        .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+        .hover\:shadow-lg:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .hover\:scale-105:hover { transform: scale(1.05); }
+        .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .duration-300 { transition-duration: 300ms; }
+        .overflow-hidden { overflow: hidden; }
+        .hidden { display: none; }
+        .md\:flex {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .md\:flex { display: flex; }
+        }
+        .lg\:flex {
+            display: none;
+        }
+        @media (min-width: 1024px) {
+            .lg\:flex { display: flex; }
+        }
+        .mr-2 { margin-right: 0.5rem; }
+        .space-x-6 > *:not([hidden]) ~ *:not([hidden]) { margin-left: 1.5rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+        .space-y-4 > *:not([hidden]) ~ *:not([hidden]) { margin-top: 1rem; }
+        .mt-1 { margin-top: 0.25rem; }
+        .text-white { color: #ffffff; }
+        .text-gray-800 { color: #1f2937; }
+        .text-gray-900 { color: #111827; }
+        .text-gray-600 { color: #4b5563; }
+        .text-gray-700 { color: #374151; }
+        .text-orange-500 { color: #f97316; }
+        .text-green-500 { color: #22c55e; }
+        .text-red-500 { color: #ef4444; }
+        .text-blue-500 { color: #3b82f6; }
+        .text-sm { font-size: 0.875rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        .text-5xl { font-size: 3rem; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+        .font-semibold { font-weight: 600; }
+        .leading-tight { line-height: 1.25; }
+        .h-8 { height: 2rem; }
+        .h-10 { height: 2.5rem; }
+        .w-8 { width: 2rem; }
+        .w-10 { width: 2.5rem; }
+        .object-cover { object-fit: cover; }
+        .z-50 { z-index: 50; }
+        .opacity-0 { opacity: 0; }
+        .opacity-100 { opacity: 1; }
+        .translate-x-full { transform: translateX(100%); }
+        .translate-x-0 { transform: translateX(0); }
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .mt-1 { margin-top: 0.25rem; }
+        .mr-2 { margin-right: 0.5rem; }
+        .ring-orange-500:focus {
+            --tw-ring-color: #f97316;
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            box-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        }
+        .antialiased {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .header {
+            background-color: white;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .header-logo {
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+        }
+
+        .header-logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .header-logo-accent {
+            color: #f97316;
+        }
+
+        .header-contact-info {
+            display: flex;
+            align-items: center;
+            color: #4b5563;
+        }
+
+        .header-contact-icon {
+            margin-right: 0.5rem;
+            color: #f97316;
+        }
+
+        .header-user-avatar {
+            height: 2rem;
+            width: 2rem;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+        }
+
+        .mobile-menu-button {
+            color: #4b5563;
+            font-size: 1.5rem;
+        }
+
+        .hero-section {
+            background-color: #f3f4f6;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content-left {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-heading {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subheading {
+            font-size: 1.125rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #ff8c00;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background-color: #e67e00;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: scale(1.05);
+        }
+
+        .hero-image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .main-image {
+            border-radius: 0.75rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            width: 100%;
+            max-width: 28rem;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .overlay-form {
+            padding: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 91.666667%;
+            max-width: 24rem;
+        }
+
+        .form-heading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-subheading {
+            color: #4b5563;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-input {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px 16px;
+            width: 100%;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .captcha-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .captcha-text {
+            background-color: #f1f5f9;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #334155;
+        }
+
+        .captcha-refresh {
+            cursor: pointer;
+            color: #64748b;
+            font-size: 1.125rem;
+        }
+
+        .terms-checkbox-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .terms-checkbox {
+            margin-top: 0.25rem;
+            margin-right: 0.5rem;
+            border-radius: 0.25rem;
+            color: #f97316;
+        }
+        .terms-checkbox:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            --tw-ring-color: #f97316;
+        }
+
+
+        .terms-label {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+
+        .terms-link {
+            color: #f97316;
+            text-decoration: none;
+        }
+        .terms-link:hover {
+            text-decoration: underline;
+        }
+
+        .form-submit-button {
+            width: 100%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .form-submit-button:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: scale(1.05);
+        }
+
+        .stats-section {
+            background-color: white;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-icon {
+            font-size: 1.875rem;
+            color: #f97316;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .stat-label {
+            color: #4b5563;
+        }
+
+        .treatments-section {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .treatments-heading {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .treatments-subheading {
+            font-size: 1.125rem;
+            color: #4b5563;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .treatment-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 2rem;
+        }
+
+        .treatment-card {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .treatment-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .treatment-card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .treatment-card-description {
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        .treatment-card-subtitle {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .treatment-card-ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 1rem;
+            color: #475569;
+            text-align: left;
+            width: 100%;
+        }
+        .treatment-card-ul li {
+            margin-bottom: 4px;
+        }
+
+        .treatment-card-price {
+            color: #374151;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .treatment-card-price-value {
+            color: #f97316;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .treatment-card-button {
+            width: 100%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .treatment-card-button:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: #1f2937;
+            color: white;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        #customAlert {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            color: white;
+            z-index: 50;
+            transition: all 0.3s ease-in-out;
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        #customAlert.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        #customAlert.bg-green-500 { background-color: #22c55e; }
+        #customAlert.bg-red-500 { background-color: #ef4444; }
+        #customAlert.bg-blue-500 { background-color: #3b82f6; }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://placehold.co/40x40/000000/FFFFFF?text=CD" alt="Clove Dental Logo" class="header-logo">
+                <span class="header-logo-text">Clove <span class="header-logo-accent">Dental</span></span>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="header-contact-info">
+                    <i class="fas fa-headset header-contact-icon"></i>
+                    <span>Customer Support</span>
+                </div>
+                <div class="header-contact-info">
+                    <i class="fas fa-phone-alt header-contact-icon"></i>
+                    <span>985-6589-510</span>
+                </div>
+                <div class="header-contact-info">
+                    <img src="https://placehold.co/32x32/FF8C00/FFFFFF?text=KS" alt="User Avatar" class="header-user-avatar">
+                    <span>Krishaank Shukla</span>
+                </div>
+            </div>
+
+            <button class="md:hidden mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container flex flex-col md:flex-row items-center justify-between">
+            <div class="hero-content-left md:w-1/2 md:text-left mb-8 md:mb-0">
+                <h1 class="hero-heading">
+                    Painless Root Canal Treatment in Delhi
+                </h1>
+                <p class="hero-subheading">
+                    Expert RCT. Zero Pain, Right Here in Delhi.
+                </p>
+                <button id="bookAppointmentBtn" class="btn-primary">
+                    <i class="fas fa-calendar-alt mr-2"></i> Book Appointment
+                </button>
+            </div>
+
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end relative">
+                <img src="image_f5a52f.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/D1D5DB/4B5563?text=Dental+Clinic';" alt="Dental Clinic Interior" class="main-image">
+
+                <div class="card overlay-form">
+                    <h2 class="form-heading">Get Expert Dental Guidance in Delhi</h2>
+                    <p class="form-subheading">
+                        Book your free consultation today and take the first step towards healthy, beautiful teeth.
+                    </p>
+                    <form id="consultationForm" class="space-y-4">
+                        <div>
+                            <input type="text" id="name" placeholder="Name" class="form-input" required>
+                        </div>
+                        <div>
+                            <input type="tel" id="mobile" placeholder="Mobile Number" class="form-input" required>
+                        </div>
+                        <div class="captcha-container">
+                            <input type="text" id="captchaInput" placeholder="Enter Captcha" class="form-input flex-grow" required>
+                            <span id="captchaText" class="captcha-text"></span>
+                            <i id="refreshCaptcha" class="fas fa-sync-alt captcha-refresh"></i>
+                        </div>
+                        <div class="terms-checkbox-container">
+                            <input type="checkbox" id="terms" class="terms-checkbox" required>
+                            <label for="terms" class="terms-label">
+                                I agree to CLOVE Dental's <a href="#" class="terms-link">Terms and Privacy Policy</a> and consent to contact via phone, email or SMS.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary form-submit-button">
+                            Book a Free Consultation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <i class="fas fa-clinic-medical stat-icon"></i>
+                <span class="stat-number">600+</span>
+                <span class="stat-label">Clinics</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-user-md stat-icon"></i>
+                <span class="stat-number">1300+</span>
+                <span class="stat-label">Dentists</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-smile-beam stat-icon"></i>
+                <span class="stat-number">30 L+</span>
+                <span class="stat-label">Happy Patients</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-tooth stat-icon"></i>
+                <span class="stat-number">55K+</span>
+                <span class="stat-label">Ortho Cases</span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-teeth-open stat-icon"></i>
+                <span class="stat-number">55K+</span>
+                <span class="stat-label">Implants Placed</span>
+            </div>
+            <div class="stat-item hidden lg:flex">
+                <i class="fas fa-clinic-medical stat-icon"></i>
+                <span class="stat-number">600+</span>
+                <span class="stat-label">Clinics</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="treatments-section">
+        <div class="container">
+            <h2 class="treatments-heading">
+                Types of Root Canal Treatments
+            </h2>
+            <p class="treatments-subheading">
+                In a root canal, the dentist removes infected pulp, cleans the tooth, and fills it with special material.
+            </p>
+
+            <div class="treatment-cards-grid">
+                <div class="card treatment-card">
+                    <img src="https://placehold.co/300x200/FF8C00/FFFFFF?text=RCT" onerror="this.onerror=null;this.src='image_f5f728.png';" alt="Root Canal Treatment" class="treatment-card-image">
+                    <h3 class="treatment-card-title">Root Canal Treatment</h3>
+                    <p class="treatment-card-description">
+                        Ideal for infected or damaged tooth
+                    </p>
+                    <h4 class="treatment-card-subtitle">Types of RCT</h4>
+                    <ul class="treatment-card-ul">
+                        <li>Root Canal Treatment</li>
+                        <li>Split RCT</li>
+                        <li>Split RCT with rubber dam</li>
+                        <li>Split RCT with laser</li>
+                    </ul>
+                    <p class="treatment-card-price">
+                        Starting Price <span class="treatment-card-price-value">₹19,999</span>
+                    </p>
+                    <button class="btn-primary treatment-card-button get-consultation-btn">
+                        Get Free Consultation
+                    </button>
+                </div>
+
+                <div class="card treatment-card">
+                    <img src="https://placehold.co/300x200/4CAF50/FFFFFF?text=Re-RCT" onerror="this.onerror=null;this.src='image_f5a5a9.png';" alt="Re-Root Canal Treatment" class="treatment-card-image">
+                    <h3 class="treatment-card-title">Re-Root Canal Treatment</h3>
+                    <p class="treatment-card-description">
+                        Ideal issues that persist or recur after an initial root canal treatment
+                    </p>
+                    <h4 class="treatment-card-subtitle">Types of RCT</h4>
+                    <ul class="treatment-card-ul">
+                        <li>Re-RCT with rubber dam</li>
+                        <li>Re-RCT laser specialist</li>
+                        <li>Re-RCT with retrieval of old RCT filling</li>
+                    </ul>
+                    <p class="treatment-card-price">
+                        Starting Price <span class="treatment-card-price-value">₹19,999</span>
+                    </p>
+                    <button class="btn-primary treatment-card-button get-consultation-btn">
+                        Get Free Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Clove Dental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function generateCaptcha() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < 6; i++) {
+                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return captcha;
+        }
+
+        const captchaTextElement = document.getElementById('captchaText');
+        const captchaInputElement = document.getElementById('captchaInput');
+        const refreshCaptchaButton = document.getElementById('refreshCaptcha');
+        const consultationForm = document.getElementById('consultationForm');
+        const bookAppointmentBtn = document.getElementById('bookAppointmentBtn');
+        const getConsultationBtns = document.querySelectorAll('.get-consultation-btn');
+
+        let currentCaptcha = '';
+
+        function initCaptcha() {
+            currentCaptcha = generateCaptcha();
+            captchaTextElement.textContent = currentCaptcha;
+        }
+
+        refreshCaptchaButton.addEventListener('click', initCaptcha);
+
+        consultationForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const enteredCaptcha = captchaInputElement.value;
+            const termsAccepted = document.getElementById('terms').checked;
+
+            if (enteredCaptcha !== currentCaptcha) {
+                alertMessage("Incorrect Captcha! Please try again.", "error");
+                initCaptcha();
+                return;
+            }
+
+            if (!termsAccepted) {
+                alertMessage("Please accept the Terms and Privacy Policy.", "error");
+                return;
+            }
+
+            alertMessage(`Thank you, ${name}! Your consultation request for mobile ${mobile} has been submitted.`, "success");
+
+            consultationForm.reset();
+            initCaptcha();
+        });
+
+        bookAppointmentBtn.addEventListener('click', function() {
+            alertMessage("You clicked 'Book Appointment'! Please fill out the form below.", "info");
+            document.getElementById('consultationForm').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        getConsultationBtns.forEach(button => {
+            button.addEventListener('click', function() {
+                alertMessage("You clicked 'Get Free Consultation'! Please fill out the form above.", "info");
+                document.getElementById('consultationForm').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        function alertMessage(message, type = "info") {
+            const existingAlert = document.getElementById('customAlert');
+            if (existingAlert) {
+                existingAlert.remove();
+            }
+
+            const alertDiv = document.createElement('div');
+            alertDiv.id = 'customAlert';
+            alertDiv.className = ``;
+
+            if (type === "success") {
+                alertDiv.classList.add('bg-green-500');
+            } else if (type === "error") {
+                alertDiv.classList.add('bg-red-500');
+            } else {
+                alertDiv.classList.add('bg-blue-500');
+            }
+
+            alertDiv.style.position = 'fixed';
+            alertDiv.style.top = '1rem';
+            alertDiv.style.right = '1rem';
+            alertDiv.style.padding = '1rem';
+            alertDiv.style.borderRadius = '0.5rem';
+            alertDiv.style.boxShadow = '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)';
+            alertDiv.style.color = 'white';
+            alertDiv.style.zIndex = '50';
+            alertDiv.style.transition = 'all 0.3s ease-in-out';
+            alertDiv.style.transform = 'translateX(100%)';
+            alertDiv.style.opacity = '0';
+
+
+            alertDiv.textContent = message;
+            document.body.appendChild(alertDiv);
+
+            setTimeout(() => {
+                alertDiv.style.transform = 'translateX(0)';
+                alertDiv.style.opacity = '1';
+            }, 100);
+
+            setTimeout(() => {
+                alertDiv.style.transform = 'translateX(100%)';
+                alertDiv.style.opacity = '0';
+                alertDiv.addEventListener('transitionend', () => alertDiv.remove());
+            }, 5000);
+        }
+
+        document.addEventListener('DOMContentLoaded', initCaptcha);
+    </script>
+</body>
+</html>
